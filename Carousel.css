@@ -1,0 +1,62 @@
+.carousel-container {
+    position: relative;
+    width: fit-content;
+    height: fit-content; /* Make sure this is the full height */
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    height: 100%;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-prev,
+.carousel-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Centering the indicator dots */
+.carousel-indicators {
+    position: absolute;
+    bottom: 20px;  /* Adjust as needed */
+    left: 35%;  /* Centers horizontally */
+    transform: translateX(-50%);  /* Fixes centering */
+    display: flex;
+    gap: 10px;  /* Space between the dots */
+    justify-content: center;  /* Ensure the dots are centered */
+    z-index: 10;  /* Ensure dots are on top of the images */
+}
+
+.indicator {
+    height: 12px;
+    width: 12px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: rgba(255, 255, 255, 1);
+}

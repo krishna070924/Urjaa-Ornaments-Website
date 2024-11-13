@@ -1,0 +1,217 @@
+/* Reset styling for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Container */
+.navbar-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px 0;
+    margin-top: 10px;
+}
+
+/* Navbar structure with flex for centering the logo */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Space between the items */
+    align-items: end;
+    width: 100%;
+    max-width: 1300px; /* Center the navbar */
+    gap: 50px;
+    position: relative;
+    padding: 0 20px; /* Padding on the sides to prevent items from touching the edges */
+}
+
+/* Logo styling */
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    flex: 1; /* Allow the logo to take up remaining space */
+    max-width: fit-content;
+}
+
+.navbar-logo img {
+    max-width: 100%;
+    height: 80px; /* Adjust height as needed */
+    vertical-align: bottom;
+    padding:0%;
+    margin: 0%;
+}
+
+/* Navbar menu styling */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    gap: 20px; /* Space between menu items */
+    flex: 2; /* Allow the menu items to take the available space */
+    justify-content: space-evenly; /* Evenly space the items */
+    font-style: Georgia, serif;
+}
+
+.navbar-menu li {
+    margin: 0;
+}
+
+.navbar-menu a,
+.dropdown-toggle {
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    color: #333;
+    padding: 10px;
+    white-space: nowrap;
+}
+
+/* Removes the dropdown arrow */
+.dropdown-toggle::after {
+    content: none;
+}
+
+.navbar-menu a:hover,
+.dropdown-toggle:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+    visibility: hidden;  /* Initially hidden */
+    opacity: 0;          /* Make it transparent initially */
+    position: fixed;  /* Use fixed positioning */
+    top: 100px;        /* Adjust to match navbar height */
+    left: 50%;        /* Center horizontally */
+    transform: translateX(-50%);  /* Move by 50% of its width to truly center it */
+    background-color: #f5f5f5;
+    padding: 20px;
+    width: 100%; /* Full width of the container */
+    max-width: 1300px; /* Adjust as necessary */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-top: 2px solid #d62d20;
+    z-index: 100;
+    display: flex;        /* Use flex to arrange columns in a row */
+    gap: 20px;            /* Gap between columns */
+    transition: opacity 0.3s ease, visibility 0.3s ease;  /* Smooth transition */
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+    visibility: visible;
+    opacity: 1; /* Make it visible and opaque */
+}
+
+/* Dropdown columns styling */
+.dropdown-column {
+    flex: 1;  /* Make each column take equal width */
+    width: fit-content;  /* Minimum width for columns */
+    padding: 10px;
+}
+
+.dropdown-column h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #666;
+    letter-spacing: 0.5px;
+}
+
+.dropdown-column a {
+    display: block;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+
+.dropdown-column a:hover {
+    color: #d62d20;
+}
+
+
+/* Search bar styling */
+.search-bar {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    width: 60%;
+    background-color: #f5f5f5;
+    padding: 8px 16px;
+    border-radius: 20px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    font-size: 14px;
+    color: #666;
+    padding: 8px;
+}
+
+.search-icons {
+    display: flex;
+    align-items: center;
+    gap: 1
+}
+
+.section2 {
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #f0dada;
+    border-radius: 25px;
+    padding: 10px;
+    height: 40px;
+    width: 100%;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    flex: 1;
+    font-size: 16px;
+    color: #333;
+}
+
+.search-icons {
+    display: flex;
+    align-items: center;
+}
+
+.search-icons i {
+    color: #cd0017;
+    font-size: 20px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.search-icons i:hover {
+    color: #933939;
+}
